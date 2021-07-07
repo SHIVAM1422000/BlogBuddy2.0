@@ -1,0 +1,83 @@
+
+i.icon{
+	
+	font-size:1.5rem;
+	color:rgb(255, 60, 0);
+}
+
+    
+#mainContainer{
+	position:relative;
+	top:5px;
+}
+
+#input_des{
+	height:100px;
+	width:50%;
+}
+
+#input_title{
+	
+	width:50%;
+}
+
+#input_image{
+	
+	width:50%;
+}
+
+.fp{
+    background-image: url(https://goinswriter.com/wp-content/uploads/gw-wab-2.jpg);
+    background-size: cover;
+    height: 890px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+
+input[type="text"]{
+    height: 50px;
+    text-align: center;
+    width: 600px;
+    background: #efbbff;
+    /*font-family: "Nunito",sans-serif;
+    font-weight: bold;*/
+    font-size: 20px;
+    border: none;
+}
+
+
+input[type="abc"]{
+    height: 20px;
+    text-align: center;
+    width: 400px;
+    background: #efbbff;
+    font-family: "Nunito",sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    padding-bottom: 5px;
+}
+
+input[type="submit"]{
+
+    height: 40px;
+    width: 100px;
+    margin-top: 10px;
+    background: rgb(247, 120, 120);
+    
+
+}
+
+
+
+.foot{
+	margin-top: 5px;
+    padding-top: 10px;
+    padding-left: 10px;
+	height: 70px;
+	width: 1920px;
+	
+    text-align: center;
+	background-color: rgba(0, 0, 0, 0.801);
+}

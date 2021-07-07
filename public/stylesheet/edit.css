@@ -1,0 +1,64 @@
+
+
+body{
+
+    background-image: url(http://3.bp.blogspot.com/-Eks1fILQkj4/T-hfPvH0WUI/AAAAAAAACC8/xTuaFusDIHw/s1600/Scenery.jpg);
+    background-size: cover;
+
+}
+
+i.icon{
+	
+	font-size:1.5rem;
+	color:rgb(255, 60, 0);
+}
+
+.fparc{
+    background-color: rgba(2, 1, 8, 0.767);
+    background-size: cover;
+    width: 1900;
+	padding-top: 40px;
+    padding-bottom: 40px;
+    clip-path: circle(70%);
+
+}
+
+.pict{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.tit{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.discp{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.uname{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-size: 30px;
+    text-align: center;
+
+}
+
+.but{
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+
+}

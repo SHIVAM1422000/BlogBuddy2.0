@@ -6,8 +6,8 @@
 <head>
 	<title>Blog</title>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-	<link  rel="stylesheet" type="text/css" href="/stylesheet/app.css">
-		
+	<link  rel="stylesheet" type="text/css" href="/stylesheet/edit.css">
+	
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <!-- <style type="text/css"></style> -->
 </head>
@@ -19,8 +19,8 @@
 	<div class="ui fixed inverted menu">
 		<div class="ui container">
 			<div class="header item">
-				<i class="rss icon"></i>Blog Site			</div>
-			<a class="item" href="/blogs">Home</a>
+				<i class="rss icon"></i>Blog Buddy		</div>
+			<a class="item" href="/blogs">Explore</a>
 			<% if(cu){ %>
 		<a class="item" id="modifyBlog" href="#">Modify Post</a>
 				<% }else{ %>
@@ -33,7 +33,7 @@
 		<a class="item" href="/logout">Logout</a>
 		</div>
   
-</div>
+	</div>
 	
 	<!-- *********************** Navbar Ends***************************************** -->
                   
@@ -43,59 +43,68 @@
 	<!-- ================================================================== -->
 	
 	<div id="mainContainer" class="container">
-	<%=cu%>
+		<%=cu%>
 
-	<% if(cu){ %>
-		
-	<% }else{ %>
-	    
-		<% } %>
-	<h1>
-		<div>
-		<%=blog.title%>	
-	</div>
-	</h1>
-		<div>
-			<image src="<%=blog.image%>"></image>
-	</div>
-	
-	<div>
-		<%=blog.body%>	
-	</div>
-	
-    <div>
-		Created by:-<%=blog.uname%>
-	</div>
-
-	<% if(cu){ %> 
-	<% if(cu._id.equals(blog.uid)){ %>
-<!-- //modify -->
-<a class="item btn btn-success" id="editBlog1" href="/blogs/<%=blog._id%>/edit">Edit Post</a>
-
-<form action="/blogs/<%=blog._id%>?_method=DELETE" method="POST" class="mt-2">
-	<button class="btn btn-danger" id="deleteBlog1">
-		Delete Blog
-	</button>
-</form>
-<!-- ********************* -->
-
+		<% if(cu){ %>
+			
 		<% }else{ %>
 			
-<!-- //modify -->
-<a class="item btn btn-success" id="editBlog1" href="/wrong">Edit Post</a>
+			<% } %>
+		
+		<div class="fparc">
+			<h1 style="color: rgb(200, 22, 245); font-family: Arial, Helvetica, sans-serif;">
+				<div class="tit">
+					<%=blog.title%>	
+				</div>
+			</h1>
+			
+			<div class="pict">
+					<image src="<%=blog.image%>"></image>
+			</div>
+			
+			<div class="discp" style="color: rgb(238, 255, 0); font-family: Arial, Helvetica, sans-serif; size: 10px;">
+				<%=blog.body%>	
+			</div>
+			
+			<div class="uname" style="color: rgb(255, 0, 0);">
+				Created by:-<%=blog.uname%>
+			</div>
+		</div>
 
-<form action="/wrong" class="mt-3">
-	<button class="btn btn-danger" id="deleteBlog1">
-		Delete Blog
-	</button>
-</form>
-<!-- ********************* -->
+		<% if(cu){ %> 
+		<% if(cu._id.equals(blog.uid)){ %>
+		<!-- //modify -->
+		
+		<div class="but">
+			<a class="item btn btn-success" id="editBlog1" href="/blogs/<%=blog._id%>/edit">Edit Post</a>
+		</div>
+		
+		<form action="/blogs/<%=blog._id%>?_method=DELETE" method="POST">
+			<button class="btn btn-danger" id="deleteBlog1">
+				Delete Blog
+			</button>
+		</form>
+		<!-- ********************* -->
 
-<% } %>
+				<% }else{ %>
+					
+		<!-- //modify -->
+		
+		<a class="item btn btn-success" id="editBlog1" href="/wrong">Edit Post</a>
 
-<% } %>
+		
+		<form action="/wrong">
+			<button class="btn btn-danger" id="deleteBlog1">
+				Delete Blog
+			</button>
+		</form>
+		<!-- ********************* -->
 
-</div>
+		<% } %>
+
+		<% } %>
+
+	</div>
 	
 <style>
 	.hide{
